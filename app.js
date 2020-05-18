@@ -1,5 +1,6 @@
 // init weather class
 const weather = new Weather("London", "uk");
+const ui = new UI();
 
 // weather.changeLocation("Miami", "us");
 
@@ -10,6 +11,7 @@ function getWeather() {
     .getWeather()
     .then((results) => {
       console.log(results);
+      ui.paint(results);
     })
     .catch((err) => console.log(err));
 }
